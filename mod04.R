@@ -28,7 +28,7 @@ cohens.d <- function(x) {
   mean.control <- mean(which.control$score)
   sd.treat <- sd(which.treat$score)
   sd.control <- sd(which.control$score)
-  diff <- abs(sd.treat-sd.control)
+  diff <- abs(mean.treat-mean.control)
   pool.sd <- (sd.treat + sd.control)/2
   c.d <-diff/pool.sd
   print(c.d)
