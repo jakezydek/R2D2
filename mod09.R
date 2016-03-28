@@ -1,5 +1,5 @@
 head(diamonds)
-?diamonds
+
 plot(diamonds$price~diamonds$carat,cex=.4,pch=20,col="royalblue1")
 price<-diamonds$price
 carat<-diamonds$carat
@@ -11,7 +11,7 @@ lines(xgrid,ygrid,col="firebrick2",lwd=3)
 
 xyplot(price~carat,diamonds,
        group=diamonds$color,auto.key=T,
-       type="p",alpha=.3,)
+       type=c("p","r"),alpha=.3)
 
 ggplot(diamonds,aes(x=carat,y=price,color=color))+
   geom_point(alpha=.5)+
